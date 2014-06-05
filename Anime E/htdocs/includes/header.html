@@ -1,0 +1,78 @@
+<html>
+<head><title>AE</title>
+<style rel="stylesheet" href="style.css" type="text/css" media="screen">
+
+body
+{
+ background-color: #000000;
+}
+#banner
+{
+ height: 50px;
+ background-color: #DC143C;
+ font-family: ;
+ text-align: center;
+ font-size: 45px;
+ font-color: white;
+}
+#all
+{
+ width: 1000px;
+ margin-left: auto;
+ margin-right: auto;
+}
+#content
+{
+ height: 750px;
+ background-color: white;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+#side
+{
+ width: 150px;
+ height: 490px;
+ float: left;
+}
+#footer
+{
+ clear: both;
+ margin-top: 5px;
+}
+
+</style>
+</head>
+<body><center>
+<div id="all">
+<div id="banner"><strong>ANIME ENTERPRISE</strong></div>
+<div id="content">
+<Table width="700" cellpadding="10"><tr><td align="right">
+
+<?
+if (!isset($_SESSION['email'])){
+	echo ("<a href=login.php>Login</a> | ");
+	echo ("<a href=../Home/register.php>Register</a> | "); 
+	echo ("<a href=../Home/forgot.php>Forgot Password</a>");  
+} else {
+	echo ("<a href=../Home/logout.php>Logout</a>"); 
+} 
+?>
+
+<p></td></tr></table>
+
+<div id="side">
+<table width="700" cellpadding="10"><td width="100" valign="top">
+
+<?
+if (!isset($_SESSION['email'])){
+	echo ("<a href=../Home/index.php>Home</a><p>");
+	echo ("<a href=../Home/link.php>Links</a>");  
+}else {
+	echo ("<a href=../Home/index.php>Home</a><p>");
+	echo ("<a href=../bookmark/index.php>My Bookmarks</a><p>"); 
+	echo ("<a href=../contact/contact.php>Contact us</a><p>"); 
+} 
+?>
+
+</td><td valign="top">
+
